@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+
+import appcss from "./App.module.css";
+import Layout from "./layout/Layout";
 
 function App() {
+
+  const cssClassname = ["col-md-12",appcss.screen]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container-fluid" style={{backgroundColor:"rgb(0,0,0,0.25)"}}>
+      <div className="row">
+        <div className={cssClassname.join(" ")}  >
+         <Layout></Layout>
+        </div>
+      </div>
     </div>
   );
 }
